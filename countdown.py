@@ -1,19 +1,21 @@
+import time
 
-from curses.ascii import isdigit
 
 
-t = input("Digite o tempo em (segundos): ")
+t = input("Digite o tempo (em segundos): ")
 
 if t.isdigit():
     t = int(t)
 else: 
     print("Entrada inválida!")
     quit()
-
-while
+ 
+while t : 
     minutes, seconds = divmod(t, 60)
-    timer = f"{minutes}:{seconds}"
+    timer = "{:02d}:{:02d}".format(minutes, seconds)
     print(timer, end="\r")
+    time.sleep(1)
     t = t -1
 
+print("TEMPO ACABOU!")
 
